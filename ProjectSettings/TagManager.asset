@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Map Borders
   - Water
   - UI
   - 
@@ -44,9 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 40336569
     locked: 0
-  - name: Foreground
-    uniqueID: 3978456519
-    locked: 0
   - name: Movables
     uniqueID: 4292279961
+    locked: 0
+  - name: Foreground
+    uniqueID: 3978456519
     locked: 0
