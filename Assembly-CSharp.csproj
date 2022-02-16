@@ -9,11 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-<<<<<<< HEAD
-    <ProjectGuid>{C9D2C667-7EFF-A1C2-AB2A-6853FA507E1D}</ProjectGuid>
-=======
     <ProjectGuid>{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}</ProjectGuid>
->>>>>>> Thai96
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +56,6 @@
     <Compile Include="Assets\Scripts\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
