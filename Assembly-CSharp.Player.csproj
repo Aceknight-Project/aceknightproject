@@ -53,9 +53,10 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
-    <Compile Include="Assets\Scripts\PatrolBehavior.cs" />
+    <Compile Include="Assets\Scripts\CameraBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
