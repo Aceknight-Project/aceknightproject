@@ -9,6 +9,7 @@ public class CameraBehavior : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject bossArea;
+    
     void Start()
     {
         

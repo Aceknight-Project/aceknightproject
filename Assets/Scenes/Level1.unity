@@ -27411,6 +27411,71 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 66.877686, y: 32.596283}
   m_EdgeRadius: 0
+--- !u!1001 &1506454372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.78094554
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.73294884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635901, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_Name
+      value: PieRow's MKI BattlesuitMain
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
 --- !u!1 &1682704123
 GameObject:
   m_ObjectHideFlags: 0
