@@ -8,14 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Map Borders
+  - Ground
   - Water
   - UI
-<<<<<<< HEAD
-  - Player
-=======
-  - Ground
->>>>>>> Thai96
+  - 
   - 
   - 
   - 
@@ -46,11 +42,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 40336569
+    uniqueID: 3440712849
     locked: 0
   - name: Movables
-    uniqueID: 4292279961
+    uniqueID: 1333398611
     locked: 0
   - name: Foreground
-    uniqueID: 3978456519
+    uniqueID: 3847615707
     locked: 0

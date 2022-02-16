@@ -177,7 +177,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 40336569
+  m_SortingLayerID: -854254447
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8a555e52f7da8ed40badc3cdc3386240, type: 3}
@@ -256,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635899, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_JumpForce
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 6412964348972635901, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
       propertyPath: m_Name
@@ -337,7 +341,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 40336569
+  m_SortingLayerID: -854254447
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -8617,7 +8621,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 40336569
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 50674bc47da76f345819465c28c7860d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8670,7 +8674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 88539471}
-  bossArea: {fileID: 0}
+  bossArea: {fileID: 1187420181}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -8797,7 +8801,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 40336569
+  m_SortingLayerID: -854254447
   m_SortingLayer: 1
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -27539,7 +27543,7 @@ GameObject:
   - component: {fileID: 1716355573}
   - component: {fileID: 1716355577}
   - component: {fileID: 1716355576}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27576,7 +27580,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -9.428465, y: 50.991264}
+  - {x: -9.033075, y: 67.026474}
+  - {x: -9.005608, y: 51.03797}
   - {x: -2.814322, y: 51.02723}
   - {x: 6.8993406, y: 55.947308}
   - {x: 62.93207, y: 55.992264}
@@ -27724,8 +27729,8 @@ EdgeCollider2D:
   - {x: 84.93423, y: 46.198006}
   - {x: 84.574066, y: 46.948227}
   - {x: 86.251, y: 47.049946}
-  - {x: 93.79534, y: 50.955055}
-  - {x: 94.46004, y: 50.97907}
+  - {x: 94.0781, y: 51.04931}
+  - {x: 94.01651, y: 65.91828}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -27767,7 +27772,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -316510777
+  m_SortingLayerID: -447351589
   m_SortingLayer: 3
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}

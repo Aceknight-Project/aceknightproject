@@ -31,7 +31,7 @@ public class PatrolBehavior : MonoBehaviour
     {
         if (mustPatrol)
         {
-            mustFlip = !Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+            mustFlip = !Physics2D.OverlapCircle(groundCheck.position, 1f, groundLayer);
         }
     }
 
