@@ -19,9 +19,15 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
+=======
+  m_Title: Project
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> Thai96
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -48,7 +54,11 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 82
+=======
+  controlID: 88
+>>>>>>> Thai96
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,10 +102,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 208.8
     height: 452
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 209
+    height: 460
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> Thai96
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -126,8 +143,14 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 12}
   - {fileID: 17}
+<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
+=======
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 2
+>>>>>>> Thai96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,8 +172,13 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1536
+<<<<<<< HEAD
     height: 773
   m_MinSize: {x: 875, y: 300}
+=======
+    height: 781
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> Thai96
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -226,7 +254,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 83
+=======
+  controlID: 89
+>>>>>>> Thai96
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +283,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 84
+=======
+  controlID: 90
+>>>>>>> Thai96
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,9 +312,14 @@ MonoBehaviour:
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
+<<<<<<< HEAD
   - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 1
+=======
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> Thai96
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,6 +366,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Prefabs
   m_LastFoldersGridSize: -1
+<<<<<<< HEAD
   m_LastProjectPath: D:\Core\PRUm_Project\aceknightproject
   m_LockTracker:
     m_IsLocked: 0
@@ -333,22 +375,32 @@ MonoBehaviour:
     m_SelectedIDs: fa540000
     m_LastClickedID: 21754
     m_ExpandedIDs: 00000000ee540000f054000000ca9a3b
+=======
+  m_LastProjectPath: C:\Users\thaip\OneDrive\Documents\Unity Project
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f0540000
+    m_LastClickedID: 21744
+    m_ExpandedIDs: 00000000ea540000ec540000f654000000ca9a3b
+>>>>>>> Thai96
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Prefabs
+      m_OriginalName: Prefabs
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 21744
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -360,7 +412,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ee540000f0540000
+=======
+    m_ExpandedIDs: 00000000ea540000ec540000
+>>>>>>> Thai96
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -448,7 +504,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 360
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -483,7 +539,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 54faffff64fbffffe6420000
+=======
+      m_ExpandedIDs: 2cf9ffff64fbffffe4420000
+>>>>>>> Thai96
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -499,7 +559,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 4}
+=======
+        m_ClientGUIView: {fileID: 3}
+>>>>>>> Thai96
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -543,9 +607,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 44.426937, y: 3.6378343, z: -639.3743}
     speed: 2
     m_Value: {x: 44.426937, y: 3.6378343, z: -639.3743}
+=======
+    m_Target: {x: 45.309376, y: 17.461807, z: -20.455484}
+    speed: 2
+    m_Value: {x: 44.98775, y: 17.4986, z: -20.34952}
+>>>>>>> Thai96
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -596,9 +666,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 33.23758
     speed: 2
     m_Value: 33.23758
+=======
+    m_Target: 28.110016
+    speed: 2
+    m_Value: 29.434572
+>>>>>>> Thai96
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -690,16 +766,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 962.2
       height: 410
     m_Scale: {x: 0.47453704, y: 0.47453704}
     m_Translation: {x: 481.1, y: 205}
+=======
+      width: 1172
+      height: 229
+    m_Scale: {x: 0.2650463, y: 0.2650463}
+    m_Translation: {x: 586, y: 114.5}
+>>>>>>> Thai96
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -1013.83026
       y: -432
       width: 2027.6605
@@ -707,6 +791,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.47453704
   m_LastWindowPixelSize: {x: 1202.75, y: 538.75}
+=======
+      x: -2210.9346
+      y: -432
+      width: 4421.869
+      height: 864
+    m_MinimalGUI: 1
+  m_defaultScale: 0.2650463
+  m_LastWindowPixelSize: {x: 1465, y: 312.5}
+>>>>>>> Thai96
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -733,7 +826,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 525.60004
+=======
+    y: 533.60004
+>>>>>>> Thai96
     width: 1172
     height: 250
   m_ViewDataDictionary: {fileID: 0}
