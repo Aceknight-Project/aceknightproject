@@ -9,7 +9,8 @@ public class CameraBehavior : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject bossArea;
-    
+    [SerializeField]
+    Camera mainCam;
     void Start()
     {
         
@@ -18,6 +19,10 @@ public class CameraBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x , player.transform.position.y, -10);
+        Vector2 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPos = player.transform.position;
+        Vector2 camDockPos = (mousePos + playerPos) / 2;
+        Vector3 finalPos = new Vector3(camDockPos.x, camDockPos.y, -10);
+        transform.position = finalPos;
     }
 }

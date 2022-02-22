@@ -265,6 +265,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1391491399
       objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635899, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_CrouchSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412964348972635899, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6412964348972635901, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
       propertyPath: m_Name
       value: PieRow's MKI BattlesuitMain
@@ -8679,6 +8687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 88539471}
   bossArea: {fileID: 0}
+  mainCam: {fileID: 519420031}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
