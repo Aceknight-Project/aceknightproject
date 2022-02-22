@@ -204,7 +204,7 @@ Transform:
   m_Children:
   - {fileID: 511540496}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206109609
 GameObject:
@@ -8486,36 +8486,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &356933549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 356933550}
-  m_Layer: 0
-  m_Name: MainCamDock
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &356933550
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356933549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.361492, y: 15.511492, z: -578.5418}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &511540495
 GameObject:
   m_ObjectHideFlags: 0
@@ -8640,7 +8610,7 @@ MonoBehaviour:
   player: {fileID: 1680972402}
   bossArea: {fileID: 0}
   mainCam: {fileID: 519420031}
-  mainCamDock: {fileID: 356933549}
+  mainCamDock: {fileID: 0}
   radius: 0
 --- !u!20 &519420031
 Camera:
@@ -8708,7 +8678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6412964348972635878, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27551,7 +27521,7 @@ Transform:
   - {fileID: 206109610}
   - {fileID: 1187420182}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716355566
 GameObject:
@@ -27609,7 +27579,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -9.428465, y: 50.991264}
+  - {x: -9.042902, y: 67.040276}
+  - {x: -9.05192, y: 50.920204}
   - {x: -2.814322, y: 51.02723}
   - {x: 6.8993406, y: 55.947308}
   - {x: 62.93207, y: 55.992264}
@@ -27715,22 +27686,22 @@ EdgeCollider2D:
   - {x: 0.94976425, y: 33.931503}
   - {x: 16.730616, y: 34.010807}
   - {x: 20.41692, y: 38.023273}
-  - {x: 31.991774, y: 38.101986}
-  - {x: 31.960152, y: 37.44542}
-  - {x: 41.660416, y: 37.492863}
-  - {x: 44.054733, y: 34.137135}
-  - {x: 46.646152, y: 34.1596}
+  - {x: 31.875177, y: 38.06312}
+  - {x: 31.930307, y: 36.75901}
+  - {x: 41.92901, y: 36.806454}
+  - {x: 43.577236, y: 33.689476}
+  - {x: 46.735683, y: 33.77163}
   - {x: 47.7056, y: 31.124071}
   - {x: 49.66914, y: 30.445438}
-  - {x: 47.473602, y: 28.95122}
-  - {x: 47.668484, y: 15.238121}
+  - {x: 46.787197, y: 28.593094}
+  - {x: 46.952232, y: 15.118746}
   - {x: 49.64706, y: 14.095626}
-  - {x: 47.40341, y: 12.896715}
-  - {x: 47.380558, y: 9.714477}
-  - {x: 49.724, y: 9.169155}
-  - {x: 47.13421, y: 7.052703}
-  - {x: 47.0791, y: -0.89277816}
-  - {x: 50.01885, y: -2.023783}
+  - {x: 47.01544, y: 12.986246}
+  - {x: 47.08212, y: 9.74432}
+  - {x: 47.097744, y: 8.363374}
+  - {x: 46.82329, y: 7.052703}
+  - {x: 46.923645, y: -0.9316423}
+  - {x: 49.163834, y: -2.023783}
   - {x: 91.03547, y: -1.870431}
   - {x: 94.04866, y: 0.17879629}
   - {x: 93.9963, y: 2.0157814}
@@ -27757,8 +27728,8 @@ EdgeCollider2D:
   - {x: 84.93423, y: 46.198006}
   - {x: 84.574066, y: 46.948227}
   - {x: 86.251, y: 47.049946}
-  - {x: 93.79534, y: 50.955055}
-  - {x: 94.46004, y: 50.97907}
+  - {x: 93.96754, y: 51.09281}
+  - {x: 93.97789, y: 65.925674}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
