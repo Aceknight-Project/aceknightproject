@@ -11,10 +11,11 @@ public class PlayerBehavior : MonoBehaviour
     bool crouch = false;
     [SerializeField]
     float runSpeed = 40f;
+    public float healthPoint;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthPoint = 100f;
     }
 
     // Update is called once per frame
@@ -33,5 +34,9 @@ public class PlayerBehavior : MonoBehaviour
     {
         controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+    }
+    public float GetHealth()
+    {
+        return healthPoint;
     }
 }

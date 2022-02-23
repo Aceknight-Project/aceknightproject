@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class UIController : MonoBehaviour
     [SerializeField]
     GameObject UI;
     GameObject pauseMenu;
+    [SerializeField]
+    Slider hpBarFill;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,8 +41,13 @@ public class UIController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-            Vector2 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-            crosshair.transform.position = mousePos;
+        //Crosshair
+        Vector2 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        crosshair.transform.position = mousePos;
+
+        //Player Healthbar
+        PlayerBehavior playerScript = player.GetComponent<PlayerBehavior>();
+        hpBarFill.value = playerScript.GetHealth();
     }
     public void Resume()
     {
