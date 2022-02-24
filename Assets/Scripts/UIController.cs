@@ -17,6 +17,8 @@ public class UIController : MonoBehaviour
     GameObject pauseMenu;
     [SerializeField]
     Slider hpBarFill;
+    [SerializeField]
+    Slider hpBarOverhealFill;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +50,9 @@ public class UIController : MonoBehaviour
         //Player Healthbar
         PlayerBehavior playerScript = player.GetComponent<PlayerBehavior>();
         hpBarFill.value = playerScript.GetHealth();
+        if (playerScript.GetHealth() > 100)
+            hpBarOverhealFill.value = playerScript.GetHealth() - 100;
+        else hpBarOverhealFill.value = 0;
     }
     public void Resume()
     {

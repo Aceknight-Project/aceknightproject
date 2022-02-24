@@ -12,6 +12,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField]
     float runSpeed = 40f;
     public float healthPoint;
+    float overhealTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerBehavior : MonoBehaviour
             crouch = true;
         else if (Input.GetButtonUp("Crouch"))
             crouch = false;
+        OverhealControl();
     }
     void FixedUpdate()
     {
@@ -38,5 +40,28 @@ public class PlayerBehavior : MonoBehaviour
     public float GetHealth()
     {
         return healthPoint;
+    }
+    public float TakeDamage(float damage)
+    {
+        healthPoint -= damage;
+        return healthPoint;
+    }
+    public float Heal(float heal)
+    {
+        healthPoint += heal;
+        if (healthPoint > 130f) healthPoint = 130f;
+        return healthPoint;
+    }
+    void OverhealControl()
+    {
+        if (healthPoint > 100)
+        {
+            overhealTimer += Time.deltaTime;
+            if (overhealTimer >= 1f)
+            {
+                healthPoint -= 1f;
+                overhealTimer = 0f;
+            }
+        }
     }
 }

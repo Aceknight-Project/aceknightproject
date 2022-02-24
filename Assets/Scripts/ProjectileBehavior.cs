@@ -6,14 +6,12 @@ public class ProjectileBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     float speed =10f;
-    [SerializeField]
-    GameObject player;
-
-     void Start()
+    PlayerBehavior playerScript;
+    void Start()
     {
         float step = speed * Time.deltaTime;
-       // GameObject player = GameObject.Find("Aceknight");
-
+        GameObject player = GameObject.Find("Aceknight");
+        playerScript = player.GetComponent<PlayerBehavior>();
         GetComponent<Rigidbody2D>().AddForce( speed * (player.transform.position - transform.position));
 
     }
@@ -23,5 +21,13 @@ public class ProjectileBehavior : MonoBehaviour
     {
           
        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerScript.TakeDamage(20);
+            Destroy(gameObject);
+        }
     }
 }
