@@ -311,6 +311,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 475683126419889653, guid: dff83279538efda47833a0f347b7c841, type: 3}
   m_PrefabInstance: {fileID: 475683126331350202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &88539472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 475683126419889643, guid: dff83279538efda47833a0f347b7c841, type: 3}
+  m_PrefabInstance: {fileID: 475683126331350202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88539471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3e06295c86b6349997661e033e561e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &206109609
 GameObject:
   m_ObjectHideFlags: 0
@@ -28156,6 +28167,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221877023}
   m_CullTransparentMesh: 1
+--- !u!1 &1249136384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 475683125439841052, guid: dff83279538efda47833a0f347b7c841, type: 3}
+  m_PrefabInstance: {fileID: 475683126331350202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1249136387
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249136384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5567741a22435934898aaaf1b595b20f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1313413698
 GameObject:
   m_ObjectHideFlags: 0
@@ -121315,6 +121350,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 88539472}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnLanding
+      objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerBehavior, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889640, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 475683126419889642, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -121359,6 +121422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 475683126419889643, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: legAnimator
+      value: 
+      objectReference: {fileID: 1249136387}
     - target: {fileID: 475683126419889653, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_Name
       value: Aceknight
