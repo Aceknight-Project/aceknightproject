@@ -3,19 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FlakCannon
+  - Shield
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ShotIgnoreGround
+  - Projectile
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Interactable
+  - Shield
+  - FriendlyProjectile
   - 
   - 
   - 

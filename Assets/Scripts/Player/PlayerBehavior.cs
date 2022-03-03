@@ -15,6 +15,7 @@ public class PlayerBehavior : MonoBehaviour
     float runSpeed = 40f;
     public float healthPoint;
     float overhealTimer = 0f;
+    bool inVehicle = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,23 +25,29 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        legAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (Input.GetButtonDown("Jump"))
+        if (!inVehicle)
         {
-            legAnimator.SetBool("IsJumping", true);
-            jump = true;
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            legAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            if (Input.GetButtonDown("Jump"))
+            {
+                legAnimator.SetBool("IsJumping", true);
+                jump = true;
+            }
+            if (Input.GetButtonDown("Crouch"))
+                crouch = true;
+            else if (Input.GetButtonUp("Crouch"))
+                crouch = false;
         }
-        if (Input.GetButtonDown("Crouch"))
-            crouch = true;
-        else if (Input.GetButtonUp("Crouch"))
-            crouch = false;
         OverhealControl();
     }
     void FixedUpdate()
     {
-        controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
+        if (!inVehicle)
+        {
+            controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+            jump = false;
+        }
     }
     public float GetSpeed()
     {
@@ -49,6 +56,11 @@ public class PlayerBehavior : MonoBehaviour
     public bool GetState()
     {
         return jump;
+    }
+    public bool SetVehicleState(bool state)
+    {
+        inVehicle = state;
+        return inVehicle;
     }
     public float GetHealth()
     {
