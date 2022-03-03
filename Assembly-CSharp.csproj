@@ -57,8 +57,8 @@
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\ProjectileBehavior.cs" />
     <Compile Include="Assets\Scripts\PatrolBehavior.cs" />
-    <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
-    <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
+    <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
     <Compile Include="Assets\Scripts\LineOfSight.cs" />
     <Compile Include="Assets\Scripts\PickupController.cs" />
