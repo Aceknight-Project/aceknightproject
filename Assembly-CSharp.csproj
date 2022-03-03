@@ -53,9 +53,11 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ProjectileBehavior1.cs" />
     <Compile Include="Assets\Scripts\BossBehavior.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\ProjectileBehavior.cs" />
+    <Compile Include="Assets\Scripts\ShootingBehavior.cs" />
     <Compile Include="Assets\Scripts\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
