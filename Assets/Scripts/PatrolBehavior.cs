@@ -12,6 +12,7 @@ public class PatrolBehavior : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public Collider2D bodyCollider;
+    public Collider2D footCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +32,15 @@ public class PatrolBehavior : MonoBehaviour
     {
         if (mustPatrol)
         {
-            mustFlip = !Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
+            mustFlip = !Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer) && isOnGround();
         }
     }
 
     void Patrol()
     {
-        if (mustFlip || bodyCollider.IsTouchingLayers(groundLayer)) Flip();
+        if (mustFlip || bodyCollider.IsTouchingLayers(groundLayer) ) { 
+            Flip(); 
+        }
         body.velocity = new Vector2(movingSpeed * Time.deltaTime, body.velocity.y);
     }
     void Flip()
@@ -46,5 +49,9 @@ public class PatrolBehavior : MonoBehaviour
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         movingSpeed *= -1;
         mustPatrol = true;
+    }
+    bool isOnGround()
+    {
+        return footCollider.IsTouchingLayers(groundLayer);
     }
 }
