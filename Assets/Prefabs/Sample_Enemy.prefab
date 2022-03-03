@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3314715645053685751}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,7 @@ GameObject:
   - component: {fileID: 3314715645810003701}
   - component: {fileID: 3314715645810003700}
   - component: {fileID: 3314715645810003703}
-  - component: {fileID: 205440448}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sample_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1391491399
+  m_SortingLayerID: 1333398611
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d67eae4f6a4ad594cacf33a9fe8c4ba7, type: 3}
@@ -158,7 +157,7 @@ MonoBehaviour:
   groundCheck: {fileID: 3314715645053685751}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   bodyCollider: {fileID: 3314715645810003703}
 --- !u!58 &3314715645810003700
 CircleCollider2D:
@@ -202,25 +201,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9899206, y: 1.8401222}
   m_EdgeRadius: 0
---- !u!114 &205440448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314715645810003699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b02f1f063fb19747a98a663aa1c449d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 20
-  angle: 80
-  rootLineSight: 90
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  obstructionLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerRef: {fileID: 6412964348972635901, guid: 8e4ad05e75099a64f99be624f943f557, type: 3}
