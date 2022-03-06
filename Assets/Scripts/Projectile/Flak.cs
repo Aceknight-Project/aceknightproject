@@ -21,8 +21,7 @@ public class Flak : ProjectileBehavior
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.tag == "Boss")
-            //playerScript.TakeDamage(5000);
-        Destroy(gameObject);
+        //if (collision.gameObject.layer == 6)
+            Destroy(gameObject);
     }
 }

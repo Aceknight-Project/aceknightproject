@@ -37,14 +37,23 @@ public class FlakController : MonoBehaviour
     {
         EButtonControl();
         if (nearInteractable)
+        {
             if (Input.GetButtonDown("Interact"))
-                if (activated)
+            {
+                if (!activated)
+                {
+                    activated = true;
+                    playerBehavior.SetVehicleState(activated);
+                }
+                else
+                {
                     activated = false;
-                else activated = true;
-            
+                    playerBehavior.SetVehicleState(activated);
+                }
+            }
+        }
         if (activated)
         {
-            playerBehavior.SetVehicleState(activated);
             Player.transform.position = BarrelRotator.transform.position;
 
             //Attack 1 and CD
@@ -54,7 +63,7 @@ public class FlakController : MonoBehaviour
             }
             if (Atk1OnCD)
             {
-                if (Atk1FlashTimer > 0.3f)
+                if (Atk1FlashTimer > 0.1f)
                 {
                     MuzzleFlash.SetActive(false);
                 }
@@ -92,19 +101,12 @@ public class FlakController : MonoBehaviour
                     Atk2CDTimer += Time.deltaTime;
             }
         }
-        else
-        {
-            playerBehavior.SetVehicleState(activated);
-        }
     }
     void FixedUpdate()
     {
         if (activated)
         {
             Aim();
-        }
-        else
-        {
         }
     }
 

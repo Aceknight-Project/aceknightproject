@@ -57,6 +57,10 @@ public class PlayerBehavior : MonoBehaviour
     {
         return jump;
     }
+    public bool GetVehicleState()
+    {
+        return inVehicle;
+    }
     public bool SetVehicleState(bool state)
     {
         inVehicle = state;

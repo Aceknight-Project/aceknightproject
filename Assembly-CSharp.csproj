@@ -59,11 +59,16 @@
     <Compile Include="Assets\Scripts\Projectile\ProjectileBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
-    <Compile Include="Assets\Scripts\Game\CameraBehavior.cs" />
-    <Compile Include="Assets\Scripts\Item\PickupController.cs" />
-    <Compile Include="Assets\Scripts\Interactable\FlakController.cs" />
-    <Compile Include="Assets\Scripts\Projectile\BossAtk1.cs" />
     <Compile Include="Assets\Scripts\Projectile\Flak.cs" />
+    <Compile Include="Assets\Scripts\Projectile\BossAtk1.cs" />
+    <Compile Include="Assets\Scripts\Game\CameraBehavior.cs" />
+    <Compile Include="Assets\Scripts\Interactable\FlakController.cs" />
+    <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
+    <Compile Include="Assets\Scripts\Player\WeaponBehavior.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\BaseWeapon.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Rifle.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\SMG.cs" />
+    <Compile Include="Assets\Scripts\Projectile\PlayerProjectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField]
     GameObject player;
     [SerializeField]
     GameObject crosshair;
     [SerializeField]
     Camera mainCam;
     bool paused = false;
+    bool timeSlowed = false;
     [SerializeField]
     GameObject UI;
     GameObject pauseMenu;
@@ -19,9 +19,12 @@ public class UIController : MonoBehaviour
     Slider hpBarFill;
     [SerializeField]
     Slider hpBarOverhealFill;
+    WeaponBehavior weaponBehavior;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Aceknight");
+        weaponBehavior = player.GetComponent<WeaponBehavior>();
         Cursor.visible = false;
         pauseMenu = UI.transform.Find("PauseMenu").gameObject;
     }
@@ -33,13 +36,16 @@ public class UIController : MonoBehaviour
         {
             if (!paused)
             {
-                Time.timeScale = 0f;
-                pauseMenu.SetActive(true);
-                paused = true;
-                Cursor.visible = true;
+                Pause();
             }
             else Resume();
         }
+        if (Input.GetButtonDown("WeaponSelect"))
+        {
+            WeaponSelection();
+        }
+        else if (Input.GetButtonUp("WeaponSelect"))
+            Resume();
     }
     private void FixedUpdate()
     {
@@ -54,11 +60,22 @@ public class UIController : MonoBehaviour
             hpBarOverhealFill.value = playerScript.GetHealth() - 100;
         else hpBarOverhealFill.value = 0;
     }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+        paused = true;
+        Cursor.visible = true;
+    }
     public void Resume()
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         paused = false;
         Cursor.visible = false;
+    }
+    public void WeaponSelection()
+    {
+        Time.timeScale = 0.1f;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float Speed { get; set; }
-    public float LifeTimer { get; set; }
+    protected float Speed { get; set; }
+    protected float LifeTimer { get; set; }
 
 }
