@@ -8,6 +8,9 @@ public class BossBehavior : MonoBehaviour
     [SerializeField]
     GameObject bullet;
 
+    [SerializeField]
+    Transform Lazer;
+
     float time = 0f;
 
     public bool isInvulnerable = false;
@@ -30,6 +33,12 @@ public class BossBehavior : MonoBehaviour
         if (time >= 3)
         {
             GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
+            time = 0f;
+        }
+
+        if (time >= 3)
+        {
+            GameObject.Instantiate (Lazer, transform.position, Quaternion.identity);
             time = 0f;
         }
 

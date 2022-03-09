@@ -18,8 +18,8 @@ public class CheckPoint : MonoBehaviour
     {
         if (collider.gameObject.name == "Aceknight")
         {
-           /* GameObject mainCamera = GameObject.Find("Main Camera");
-            CameraBehavior behavior = mainCamera.GetComponent<CameraBehavior>();
+            /* GameObject mainCamera = GameObject.Find("Main Camera");
+             CameraBehavior behavior = mainCamera.GetComponent<CameraBehavior>();*//*
             behavior.inBossArea = true;*/
 
             Boss.SetActive(true);

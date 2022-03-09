@@ -121186,6 +121186,10 @@ PrefabInstance:
       value: 1391491399
       objectReference: {fileID: 0}
     - target: {fileID: 7403253507833643649, guid: 0af807144b864634d83f81310c84f39b, type: 3}
+      propertyPath: Lazer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403253507833643649, guid: 0af807144b864634d83f81310c84f39b, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4688867455736956897, guid: 6dc266a9e98bc53439eb276f0d1976fd, type: 3}
