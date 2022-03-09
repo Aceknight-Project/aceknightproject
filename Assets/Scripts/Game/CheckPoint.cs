@@ -10,17 +10,16 @@ public class CheckPoint : MonoBehaviour
 
     public GameObject HeathBar;
 
-    
-
-     
   
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.name == "Aceknight")
         {
-            /* GameObject mainCamera = GameObject.Find("Main Camera");
-             CameraBehavior behavior = mainCamera.GetComponent<CameraBehavior>();*//*
-            behavior.inBossArea = true;*/
+            GameObject mainCamera = GameObject.Find("Main Camera");
+            CameraBehavior behavior = mainCamera.GetComponent<CameraBehavior>();
+            behavior.inBossArea = true;
+
+         
 
             Boss.SetActive(true);
             HeathBar.SetActive(true);

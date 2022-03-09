@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossHealthBar.cs" />
     <Compile Include="Assets\Scripts\Game\MenuController.cs" />
+    <Compile Include="Assets\Scripts\Projectile\Indicator.cs" />
+    <Compile Include="Assets\Scripts\Projectile\BossAtk2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
