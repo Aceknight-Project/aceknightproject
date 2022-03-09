@@ -148,6 +148,7 @@ public class WeaponBehavior : MonoBehaviour
                 GameObject PlayerShotInstance = Instantiate(PlayerShot, EquippedWeapon.transform.position, Quaternion.identity);
                 float randomAngle = Random.Range(-WeaponScript.BulletSpread, WeaponScript.BulletSpread);
                 float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg + 90 + randomAngle;
+                PlayerShotInstance.GetComponent<PlayerProjectile>().Damage = WeaponScript.Damage;
                 PlayerShotInstance.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 PlayerShotInstance.GetComponent<Rigidbody2D>().AddForce(WeaponScript.BulletSpeed * (Quaternion.Euler(0, 0, angle) * Vector2.down).normalized);
             }

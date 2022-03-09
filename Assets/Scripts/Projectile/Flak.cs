@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Flak : ProjectileBehavior
 {
+    public float Damage = 5000f;
     GameObject bossScript;
     void Start()
     {

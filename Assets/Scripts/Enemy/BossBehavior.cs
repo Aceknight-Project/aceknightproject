@@ -46,7 +46,7 @@ public class BossBehavior : MonoBehaviour
 
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(float damage)
     {
         if (isInvulnerable) return;
 
@@ -61,5 +61,12 @@ public class BossBehavior : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            Flak projectile = collision.gameObject.GetComponent<Flak>();
+            takeDamage(projectile.Damage);
+        }
+    }
 }
