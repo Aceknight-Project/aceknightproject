@@ -8593,9 +8593,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 158454871284463195, guid: 0fe615898c978284b9b0dceeb5c810f6, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1517289132015839889, guid: 0fe615898c978284b9b0dceeb5c810f6, type: 3}
       propertyPath: m_Name
       value: FlakCannon (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044085773730621013, guid: 0fe615898c978284b9b0dceeb5c810f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6995720595680530849, guid: 0fe615898c978284b9b0dceeb5c810f6, type: 3}
       propertyPath: m_RootOrder
@@ -8834,6 +8842,7 @@ MonoBehaviour:
   maxX: 92
   minY: -5
   maxY: 66
+  inBossArea: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -120994,6 +121003,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770268349}
   m_CullTransparentMesh: 1
+--- !u!1 &1782199232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 158454871284463195, guid: 0fe615898c978284b9b0dceeb5c810f6, type: 3}
+  m_PrefabInstance: {fileID: 262916915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782199233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782199232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1a963bbaec2e24397f0a9a5e57efe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
+  HeathBar: {fileID: 0}
+--- !u!58 &1782199234
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782199232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000015099843, y: -2.4331155}
+  serializedVersion: 2
+  m_Radius: 5.8444977
 --- !u!1 &1854459737
 GameObject:
   m_ObjectHideFlags: 0
@@ -121145,6 +121189,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4688867455736956897, guid: 6dc266a9e98bc53439eb276f0d1976fd, type: 3}
+    - target: {fileID: 7403253507833643649, guid: 0af807144b864634d83f81310c84f39b, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8412263027087410285, guid: 0af807144b864634d83f81310c84f39b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -121199,7 +121247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8942253118724519400, guid: 0af807144b864634d83f81310c84f39b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0af807144b864634d83f81310c84f39b, type: 3}
@@ -121301,11 +121349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1863570525749235228, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.98
+      value: 46.7
       objectReference: {fileID: 0}
     - target: {fileID: 1863570525749235228, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 65.96
+      value: 57.8
       objectReference: {fileID: 0}
     - target: {fileID: 1863570525749235228, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_LocalPosition.z
@@ -121343,9 +121391,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.519
       objectReference: {fileID: 0}
+    - target: {fileID: 7471335707868618155, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9127997085190621952, guid: dff83279538efda47833a0f347b7c841, type: 3}
       propertyPath: m_Name
       value: Aceknight
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184290745060190546, guid: dff83279538efda47833a0f347b7c841, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff83279538efda47833a0f347b7c841, type: 3}
