@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy\VisionCone.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossBehavior.cs" />
     <Compile Include="Assets\Scripts\Game\UIController.cs" />
@@ -60,13 +61,15 @@
     <Compile Include="Assets\Scripts\Enemy\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Projectile\Flak.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BombBehavior.cs" />
     <Compile Include="Assets\Scripts\Projectile\BossAtk1.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NormalBullet.cs" />
     <Compile Include="Assets\Scripts\Game\CameraBehavior.cs" />
     <Compile Include="Assets\Scripts\Interactable\FlakController.cs" />
-    <Compile Include="Assets\Scripts\Item\PickupController.cs" />
-    <Compile Include="Assets\Scripts\Enemy\VisionCone.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShootingBehavior.cs" />
-    <Compile Include="Assets\Scripts\Enemy\NormalBullet.cs" />
+    <Compile Include="Assets\Scripts\Item\PickupController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BomberBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
