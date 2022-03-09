@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     [SerializeField]
     GameObject UI;
     GameObject pauseMenu;
+    GameObject weaponWheel;
     [SerializeField]
     Slider hpBarFill;
     [SerializeField]
@@ -27,6 +28,8 @@ public class UIController : MonoBehaviour
         weaponBehavior = player.GetComponent<WeaponBehavior>();
         Cursor.visible = false;
         pauseMenu = UI.transform.Find("PauseMenu").gameObject;
+        GameObject playerUI = UI.transform.Find("PlayerUI").gameObject;
+        weaponWheel = playerUI.transform.Find("WeaponWheel").gameObject;
     }
 
     // Update is called once per frame
@@ -71,11 +74,14 @@ public class UIController : MonoBehaviour
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
+        weaponWheel.SetActive(false);
         paused = false;
         Cursor.visible = false;
     }
     public void WeaponSelection()
     {
-        Time.timeScale = 0.1f;
+        Time.timeScale = 0f;
+        Cursor.visible = true;
+        weaponWheel.SetActive(true);
     }
 }

@@ -11,10 +11,11 @@ public class BaseWeapon : MonoBehaviour
     public float Damage { get; set; }
     //Offset compared to the arm.
     public float Offset { get; set; }
-    public Sprite WeaponSprite { get; set; }
     //Check if weapon is ranged or melee.
     public bool Ranged { get; set; }
+    public bool Silenced { get; set; }
     //How many bullets are shot at once.
+    public bool Automatic { get; set; }
     public int BulletCount { get; set; }
     //Randomized spread of the bullets.
     public float BulletSpread { get; set; }
@@ -29,5 +30,9 @@ public class BaseWeapon : MonoBehaviour
     void Update()
     {
         
+    }
+    public virtual void SetDefaults()
+    {
+
     }
 }

@@ -53,22 +53,27 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Item\Weapon\SMG.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossBehavior.cs" />
     <Compile Include="Assets\Scripts\Game\UIController.cs" />
     <Compile Include="Assets\Scripts\Projectile\ProjectileBehavior.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\BaseWeapon.cs" />
     <Compile Include="Assets\Scripts\Enemy\PatrolBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\Projectile\Flak.cs" />
+    <Compile Include="Assets\Scripts\Projectile\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Rifle.cs" />
     <Compile Include="Assets\Scripts\Projectile\BossAtk1.cs" />
     <Compile Include="Assets\Scripts\Game\CameraBehavior.cs" />
     <Compile Include="Assets\Scripts\Interactable\FlakController.cs" />
-    <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponBehavior.cs" />
-    <Compile Include="Assets\Scripts\Item\Weapon\BaseWeapon.cs" />
-    <Compile Include="Assets\Scripts\Item\Weapon\Rifle.cs" />
-    <Compile Include="Assets\Scripts\Item\Weapon\SMG.cs" />
-    <Compile Include="Assets\Scripts\Projectile\PlayerProjectile.cs" />
+    <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Sniper.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Shotgun.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Item\Weapon\Deagle.cs" />
+    <Compile Include="Assets\Scripts\Game\WeaponWheelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

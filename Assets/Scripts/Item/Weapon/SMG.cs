@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SMG : BaseWeapon
 {
-    public float Gay { get; set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +15,16 @@ public class SMG : BaseWeapon
     {
         
     }
-    void SetDefaults()
+    public override void SetDefaults()
     {
-        FireRate = 0.07f;
-        Damage = 26;
+        FireRate = 0.1f;
+        Damage = 10;
         Offset = 0;
         Ranged = true;
-        WeaponSprite = Resources.Load("Sprites/Item/Weapons/MP9.png") as Sprite;
+        Silenced = false;
+        Automatic = true;
         BulletCount = 1;
         BulletSpread = 15f;
+        BulletSpeed = 700f;
     }
 }

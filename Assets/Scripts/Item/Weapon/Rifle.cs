@@ -15,14 +15,16 @@ public class Rifle : BaseWeapon
     {
         
     }
-    void SetDefaults()
+    public override void SetDefaults()
     {
-        FireRate = 0.1f;
-        Damage = 33;
+        FireRate = 0.15f;
+        Damage = 34;
         Offset = 0;
         Ranged = true;
-        WeaponSprite = Resources.Load("Sprites/Item/Weapons/M4A4.png") as Sprite;
+        Silenced = false;
+        Automatic = true;
         BulletCount = 1;
         BulletSpread = 5f;
+        BulletSpeed = 700f;
     }
 }
