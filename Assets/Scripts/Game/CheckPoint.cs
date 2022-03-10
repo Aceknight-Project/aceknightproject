@@ -9,7 +9,7 @@ public class CheckPoint : MonoBehaviour
     public GameObject Boss;
 
     public GameObject HeathBar;
-
+    public GameObject BossArea;
   
     public void OnTriggerEnter2D(Collider2D collider)
     {
@@ -19,14 +19,10 @@ public class CheckPoint : MonoBehaviour
             CameraBehavior behavior = mainCamera.GetComponent<CameraBehavior>();
             behavior.inBossArea = true;
 
-         
-
             Boss.SetActive(true);
             HeathBar.SetActive(true);
+            BossArea.SetActive(true);
             gameObject.SetActive(false);
-           
-
-
         }
     }
 

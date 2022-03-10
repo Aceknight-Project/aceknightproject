@@ -1,50 +1,71 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolBehavior : MonoBehaviour
 {
-    [HideInInspector]
-    public bool mustPatrol;
-    public bool mustFlip;
-    public Rigidbody2D body;
-    public float movingSpeed;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-    public Collider2D bodyCollider;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private BoxCollider2D groundCheck;
+    [SerializeField] private BoxCollider2D wallCheck;
+    [SerializeField] private Collider2D footCollider;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] private bool _beginDirection;
+    [SerializeField] public bool mustPatrol;
+    [SerializeField] VisionCone vision;
+    private float _directionMulti;
+    Rigidbody2D enemyBody;
+
     // Start is called before the first frame update
     void Start()
     {
-        mustPatrol = true;
+        enemyBody = GetComponent<Rigidbody2D>();
+        if (_beginDirection)
+        {
+            _directionMulti = 0.5f;
+        }
+        else
+        {
+            _directionMulti = -0.5f;
+            transform.localScale = new Vector2(_directionMulti, transform.localScale.y);
+        }
+        vision = GetComponent<VisionCone>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (mustPatrol)
-        {
-            Patrol();
-        };
+  
     }
 
     private void FixedUpdate()
     {
         if (mustPatrol)
         {
-            mustFlip = !Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
+            bool isFeetOnGround = footCollider.IsTouchingLayers(groundLayer);
+            bool isNeedFlip = !groundCheck.IsTouchingLayers(groundLayer) || wallCheck.IsTouchingLayers(groundLayer);
+            if (isFeetOnGround && isNeedFlip)
+            {
+                Flip();
+            }
+            MoveForward();
         }
     }
 
-    void Patrol()
+    private void Flip()
     {
-        if (mustFlip || bodyCollider.IsTouchingLayers(groundLayer)) Flip();
-        body.velocity = new Vector2(movingSpeed * Time.deltaTime, body.velocity.y);
+        _directionMulti *= -1;
+        transform.localScale = new Vector2(_directionMulti*transform.localScale.x, transform.localScale.y);
+        if(vision != null)
+        {
+            vision.rootAngle = 360 - vision.rootAngle;
+        }
     }
-    void Flip()
+
+    private void MoveForward()
     {
-        mustPatrol = false;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        movingSpeed *= -1;
-        mustPatrol = true;
+        enemyBody.velocity = new Vector2(moveSpeed * Time.fixedDeltaTime * _directionMulti, enemyBody.velocity.y);
     }
+
+    
 }

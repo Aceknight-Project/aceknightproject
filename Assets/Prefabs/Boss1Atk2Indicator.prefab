@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5262300535854880290}
   - component: {fileID: 5262300535854880291}
   - component: {fileID: 7624279192352392468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boss1Atk2Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

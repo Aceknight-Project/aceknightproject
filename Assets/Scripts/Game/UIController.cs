@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
     [SerializeField]
     Slider hpBarOverhealFill;
     WeaponBehavior weaponBehavior;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -83,5 +85,16 @@ public class UIController : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.visible = true;
         weaponWheel.SetActive(true);
+    }
+    public void LoadLevel1()
+    {
+        Cursor.visible = true;
+        SceneManager.LoadScene("Level1");
+    }
+    public void LoadMenu()
+    {
+        Resume();
+        Cursor.visible = true;
+        SceneManager.LoadScene("Menu");
     }
 }

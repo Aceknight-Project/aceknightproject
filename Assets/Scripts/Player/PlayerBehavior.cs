@@ -8,6 +8,12 @@ public class PlayerBehavior : MonoBehaviour
     Animator legAnimator;
     [SerializeField]
     CharacterController2D controller2D;
+    [SerializeField]
+    GameObject DeathAnimation;
+    [SerializeField]
+    GameObject Gameover;
+    [SerializeField]
+    GameObject RestartBtn;
     protected float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
@@ -40,6 +46,8 @@ public class PlayerBehavior : MonoBehaviour
                 crouch = false;
         }
         OverhealControl();
+        if (healthPoint <= 0f)
+            Death();
     }
     void FixedUpdate()
     {
@@ -96,5 +104,14 @@ public class PlayerBehavior : MonoBehaviour
     public void OnLanding()
     {
         legAnimator.SetBool("IsJumping", false);
+    }
+    void Death()
+    {
+        Instantiate(DeathAnimation, transform.position, Quaternion.identity);
+        RestartBtn.SetActive(true);
+        GameObject GameOverInstance = Instantiate(Gameover, transform.position, Quaternion.identity);
+        GameObject mainCam = GameObject.Find("Main Camera");
+        GameOverInstance.transform.position = mainCam.transform.position;
+        Destroy(gameObject);
     }
 }

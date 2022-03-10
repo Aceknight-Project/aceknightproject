@@ -18,6 +18,11 @@ public class MenuController : MonoBehaviour
     }
     public void LoadLevel1()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene("Level1");
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

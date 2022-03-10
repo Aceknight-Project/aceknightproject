@@ -71,17 +71,24 @@
     <Compile Include="Assets\Scripts\Projectile\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon\Rifle.cs" />
     <Compile Include="Assets\Scripts\Projectile\BossAtk1.cs" />
+    <Compile Include="Assets\Scripts\Projectile\BossAtk2.cs" />
+    <Compile Include="Assets\Scripts\Projectile\Indicator.cs" />
     <Compile Include="Assets\Scripts\Game\CameraBehavior.cs" />
+    <Compile Include="Assets\Scripts\Game\MenuController.cs" />
     <Compile Include="Assets\Scripts\Interactable\FlakController.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon\Shotgun.cs" />
     <Compile Include="Assets\Scripts\Game\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponBehavior.cs" />
+    <Compile Include="Assets\Scripts\Effect\DeathController.cs" />
     <Compile Include="Assets\Scripts\Item\Weapon\Sniper.cs" />
     <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossHealthBar.cs" />
-    <Compile Include="Assets\Scripts\Game\MenuController.cs" />
-    <Compile Include="Assets\Scripts\Projectile\Indicator.cs" />
-    <Compile Include="Assets\Scripts\Projectile\BossAtk2.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ShootingBehavior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BomberBehavior.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Enemy\VisionCone.cs" />
+    <Compile Include="Assets\Scripts\Projectile\NormalBullet.cs" />
+    <Compile Include="Assets\Scripts\Projectile\BombBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

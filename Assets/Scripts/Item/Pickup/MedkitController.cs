@@ -22,7 +22,7 @@ public class MedkitController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerScript.Heal(50);
+            playerScript.Heal(30);
             Destroy(gameObject);
         }
     }

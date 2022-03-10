@@ -17,7 +17,7 @@ public class Indicator : MonoBehaviour
     void Update()
     {
         Timer += Time.deltaTime;
-        if(Timer > 1f)
+        if(Timer > 1.5f)
         {
             Destroy(gameObject);
         }

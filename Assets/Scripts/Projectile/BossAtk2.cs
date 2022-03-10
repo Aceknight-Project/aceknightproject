@@ -20,7 +20,7 @@ public class BossAtk2 : MonoBehaviour
     void Update()
     {
         LifeTimer += Time.deltaTime;
-        if (LifeTimer > 0.3f)
+        if (LifeTimer >= 0.3f)
             Destroy(gameObject);
     }
 

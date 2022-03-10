@@ -6,16 +6,27 @@ public class BossBehavior : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject bullet;
+    GameObject normalAttack;
 
     [SerializeField]
-    Transform Lazer;
-
-    float time = 0f;
-
+    GameObject specialAttack;
+    [SerializeField]
+    GameObject winScreen;
+    [SerializeField]
+    GameObject MenuBtn;
+    [SerializeField]
+    GameObject specialAttackIndicator;
+    GameObject player;
+    GameObject Indicator;
+    float timer1 = 0f;
+    float timer2 = 0f;
+    float timerIndicator = 0f;
+    bool timerIndicatorStarted = false;
+    
     public bool isInvulnerable = false;
     public float healthPoint;
     public float currentHealth;
+
 
     public BossHealthBar healthBar;
     // Start is called before the first frame update
@@ -24,24 +35,44 @@ public class BossBehavior : MonoBehaviour
         healthPoint = 1000000f;
         currentHealth = healthPoint;
         healthBar.setMaxHealth(healthPoint);
+        player = GameObject.Find("Aceknight");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (time >= 3)
+        timer1 += Time.deltaTime;
+        if (timer1 >= 3)
         {
-            GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
-            time = 0f;
+            GameObject.Instantiate(normalAttack, transform.position, Quaternion.identity);
+            timer1 = 0f;
         }
-
-        if (time >= 3)
+        timer2 += Time.deltaTime;
+        if (timer2 >= 15)
         {
-            GameObject.Instantiate (Lazer, transform.position, Quaternion.identity);
-            time = 0f;
-        }
+            timerIndicatorStarted = true;
+            Indicator = GameObject.Instantiate(specialAttackIndicator, transform.position, Quaternion.identity);
 
+            Quaternion rotation = Quaternion.LookRotation
+            (player.transform.position - Indicator.transform.position, Indicator.transform.TransformDirection(Vector3.up));
+            Indicator.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+
+            timer2 = 0f;
+        }
+        if (timerIndicatorStarted)
+        {
+            timerIndicator += Time.deltaTime;
+
+        }
+        if (timerIndicator >= 1.5f)
+        {
+            GameObject specialAtk = GameObject.Instantiate(specialAttack, transform.position, Quaternion.identity);
+            specialAtk.transform.rotation = Indicator.transform.rotation;
+
+            timerIndicatorStarted = false;
+            timerIndicator = 0f;
+        }
 
 
     }
@@ -54,11 +85,15 @@ public class BossBehavior : MonoBehaviour
 
         healthBar.setHealth(healthPoint);
 
-        if (healthPoint < 0) Die();
+        if (healthPoint <= 0) Die();
     }
 
     public void Die()
     {
+        GameObject mainCam = GameObject.Find("Main Camera");
+        winScreen.transform.position = mainCam.transform.position;
+        MenuBtn.SetActive(true);
+
         Destroy(gameObject);
     }
     public void OnCollisionEnter2D(Collision2D collision)

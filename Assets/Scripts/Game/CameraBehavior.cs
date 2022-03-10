@@ -38,34 +38,15 @@ public class CameraBehavior : MonoBehaviour
             finalPos.y = Mathf.Clamp(finalPos.y, minY, maxY);
             transform.position = finalPos;
         }
-        else
-        {   
+        if (inBossArea) 
             HandleZoom();
-        }
     }
 
     void HandleZoom()
     {
-        float cameraZoom = 40f;
-        float cameraZoomDifference = cameraZoom * mainCam.orthographicSize;
-        float cameraZoomSpeed = 1f;
-        mainCam.orthographicSize += cameraZoomDifference * cameraZoomSpeed* Time.deltaTime;
-
-        if (cameraZoomDifference > 0)
-        {
-            if (mainCam.orthographicSize > cameraZoom)
-            {
-                cameraZoom = mainCam.orthographicSize;
-            }
-        }
-        else
-        {
-            if(mainCam.orthographicSize < cameraZoom)
-            {
-                cameraZoom = mainCam.orthographicSize;
-            }
-        }
-        }
-
-    
+        float OrthoMaxSize = 20f;
+        if (mainCam.orthographicSize <= OrthoMaxSize)
+            mainCam.orthographicSize += 0.5f;
+        mainCam.transform.position = new Vector3(bossArea.transform.position.x, bossArea.transform.position.y, mainCam.transform.position.z);
+    }
 }
