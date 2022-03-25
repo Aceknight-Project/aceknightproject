@@ -43,6 +43,7 @@ public class ShootingBehavior : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, bulletPoint,false);
+        FindObjectOfType<AudioManager>().Play("M4A4");
     }
 
     void ChangePatrolBehavior(bool isPatrol)

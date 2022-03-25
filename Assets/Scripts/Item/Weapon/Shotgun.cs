@@ -18,13 +18,13 @@ public class Shotgun : BaseWeapon
     public override void SetDefaults()
     {
         FireRate = 1f;
-        Damage = 25;
+        Damage = 10;
         Offset = 0;
         Ranged = true;
         Silenced = false;
         Automatic = false;
-        BulletCount = 7;
-        BulletSpread = 15f;
-        BulletSpeed = 600f;
+        BulletCount = 10;
+        BulletSpread = 17f;
+        BulletSpeed = 1500f;
     }
 }

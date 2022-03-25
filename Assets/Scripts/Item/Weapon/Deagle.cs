@@ -25,6 +25,6 @@ public class Deagle : BaseWeapon
         Automatic = false;
         BulletCount = 1;
         BulletSpread = 0f;
-        BulletSpeed = 1000f;
+        BulletSpeed = 2000f;
     }
 }

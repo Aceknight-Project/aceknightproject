@@ -8,7 +8,8 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("Stronger");
+
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class MenuController : MonoBehaviour
     public void LoadLevel1()
     {
         Cursor.visible = false;
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Level1");
     }
     public void ExitGame()

@@ -100,6 +100,10 @@ public class FlakController : MonoBehaviour
                 else
                     Atk2CDTimer += Time.deltaTime;
             }
+        } else
+        {
+            MuzzleFlash.SetActive(false);
+            FlakShield.SetActive(false);
         }
     }
     void FixedUpdate()
@@ -144,6 +148,7 @@ public class FlakController : MonoBehaviour
             Vector3 mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint(BarrelRotator.transform.position);
             Atk1OnCD = true;
             MuzzleFlash.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Flak");
             GameObject FlakShotInstance = Instantiate(FlakShot, BarrelRotator.transform.position, Quaternion.identity);
             FlakShotInstance.transform.rotation = BarrelRotator.transform.rotation;
             FlakShotInstance.GetComponent<Rigidbody2D>().AddForce(700f * (mousePos - BarrelRotator.transform.position).normalized);
@@ -153,8 +158,10 @@ public class FlakController : MonoBehaviour
     {
         if (!Atk2OnCD)
         {
+            playerBehavior.TakeDamage(10f);
             Atk2OnCD = true;
             FlakShield.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Shield");
         }
     }
 }

@@ -25,6 +25,6 @@ public class Rifle : BaseWeapon
         Automatic = true;
         BulletCount = 1;
         BulletSpread = 5f;
-        BulletSpeed = 700f;
+        BulletSpeed = 1700f;
     }
 }

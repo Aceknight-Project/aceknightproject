@@ -46,18 +46,18 @@ public class BossBehavior : MonoBehaviour
         if (timer1 >= 3)
         {
             GameObject.Instantiate(normalAttack, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Flak");
             timer1 = 0f;
         }
         timer2 += Time.deltaTime;
-        if (timer2 >= 15)
+        if (timer2 >= 9)
         {
             timerIndicatorStarted = true;
-            Indicator = GameObject.Instantiate(specialAttackIndicator, transform.position, Quaternion.identity);
+            Indicator = GameObject.Instantiate(specialAttackIndicator, transform.position + new Vector3(0, 10, 0), Quaternion.identity);
 
             Quaternion rotation = Quaternion.LookRotation
             (player.transform.position - Indicator.transform.position, Indicator.transform.TransformDirection(Vector3.up));
             Indicator.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
-
             timer2 = 0f;
         }
         if (timerIndicatorStarted)
@@ -67,7 +67,8 @@ public class BossBehavior : MonoBehaviour
         }
         if (timerIndicator >= 1.5f)
         {
-            GameObject specialAtk = GameObject.Instantiate(specialAttack, transform.position, Quaternion.identity);
+            GameObject specialAtk = GameObject.Instantiate(specialAttack, transform.position + new Vector3(0, 10, 0), Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Lightning");
             specialAtk.transform.rotation = Indicator.transform.rotation;
 
             timerIndicatorStarted = false;

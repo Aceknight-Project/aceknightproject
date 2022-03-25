@@ -89,6 +89,7 @@ public class UIController : MonoBehaviour
     public void LoadLevel1()
     {
         Cursor.visible = true;
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level1");
     }
     public void LoadMenu()

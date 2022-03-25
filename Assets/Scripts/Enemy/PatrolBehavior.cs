@@ -55,7 +55,7 @@ public class PatrolBehavior : MonoBehaviour
     private void Flip()
     {
         _directionMulti *= -1;
-        transform.localScale = new Vector2(_directionMulti*transform.localScale.x, transform.localScale.y);
+        transform.localScale = new Vector2(_directionMulti, transform.localScale.y);
         if(vision != null)
         {
             vision.rootAngle = 360 - vision.rootAngle;

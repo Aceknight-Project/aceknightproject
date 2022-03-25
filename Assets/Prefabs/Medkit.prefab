@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4589590151374214030}
   - component: {fileID: 1505682938007710039}
   - component: {fileID: 3218564823329903455}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Medkit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5796704096402315959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40.377186, y: -2.8995166, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1122238567
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 35f9fdc024b43c84faedd1a5e8c674dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d0627339960d834db2fea65cc69e98b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,18 +97,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.021924734, y: -0.010964274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.73, y: 1.02}
+    oldSize: {x: 5.4, y: 5.71}
     newSize: {x: 0.73, y: 1.02}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 1.02}
+  m_Size: {x: 5.4225726, y: 5.734473}
   m_EdgeRadius: 0
 --- !u!114 &3218564823329903455
 MonoBehaviour:
@@ -122,4 +122,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba82146f7e4f5db4882d716ce475c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}

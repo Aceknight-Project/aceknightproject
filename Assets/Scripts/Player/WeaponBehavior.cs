@@ -28,6 +28,7 @@ public class WeaponBehavior : MonoBehaviour
     SpriteRenderer EquippedWeaponSprite;
     [SerializeField]
     GameObject PlayerShot;
+    string WeaponSound = "USPS";
     bool Atk1OnCD;
     float Atk1CDTimer;
     public int EquippedWeaponIndex { get; set; }
@@ -86,6 +87,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new Pistol();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "USPS";
                     EquippedWeaponSprite.sprite = USPS;
                     break; 
                 }
@@ -93,6 +95,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new SMG();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "MP9";
                     EquippedWeaponSprite.sprite = MP9;
                     break;
                 }
@@ -100,6 +103,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new Rifle();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "M4A4";
                     EquippedWeaponSprite.sprite = M4A4;
                     break;
                 }
@@ -107,6 +111,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new Sniper();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "AWP";
                     EquippedWeaponSprite.sprite = AWP;
                     break;
                 }
@@ -114,6 +119,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new Deagle();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "Deagle";
                     EquippedWeaponSprite.sprite = Deagle;
                     break;
                 }
@@ -121,6 +127,7 @@ public class WeaponBehavior : MonoBehaviour
                 {
                     WeaponScript = new Shotgun();
                     WeaponScript.SetDefaults();
+                    WeaponSound = "FAN";
                     EquippedWeaponSprite.sprite = FAN;
                     break;
                 }
@@ -145,6 +152,7 @@ public class WeaponBehavior : MonoBehaviour
             {
                 Vector3 mousePos = Input.mousePosition - Camera.main.WorldToScreenPoint(EquippedWeapon.transform.position);
                 Atk1OnCD = true;
+                FindObjectOfType<AudioManager>().Play(WeaponSound);
                 GameObject PlayerShotInstance = Instantiate(PlayerShot, EquippedWeapon.transform.position, Quaternion.identity);
                 float randomAngle = Random.Range(-WeaponScript.BulletSpread, WeaponScript.BulletSpread);
                 float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg + 90 + randomAngle;

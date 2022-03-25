@@ -25,6 +25,6 @@ public class Sniper : BaseWeapon
         Automatic = false;
         BulletCount = 1;
         BulletSpread = 0f;
-        BulletSpeed = 1500f;
+        BulletSpeed = 3000f;
     }
 }

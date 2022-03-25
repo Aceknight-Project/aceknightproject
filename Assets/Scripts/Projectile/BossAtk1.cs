@@ -8,7 +8,7 @@ public class BossAtk1 : ProjectileBehavior
     // Start is called before the first frame update
     void Start()
     {
-        Speed = 300f;
+        Speed = 1000f;
         LifeTimer = 0f;
         GameObject player = GameObject.Find("Aceknight");
         playerScript = player.GetComponent<PlayerBehavior>();

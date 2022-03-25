@@ -49,7 +49,6 @@ public class VisionCone : MonoBehaviour
         {
             Transform target = rangeCheck.transform;
             Vector2 directionToTarget = (target.position - transform.position).normalized;
-            Debug.Log(Vector2.Angle(rootSight, directionToTarget).ToString());
             if(Vector2.Angle(rootSight,directionToTarget) < viewAngle / 2)
             {
                 float distanceToTarget = Vector2.Distance(transform.position,target.position);

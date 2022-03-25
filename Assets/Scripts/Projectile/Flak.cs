@@ -9,7 +9,7 @@ public class Flak : ProjectileBehavior
     void Start()
     {
         Damage = 20000f;
-        Speed = 10f;
+        Speed = 1000f;
         LifeTimer = 0f;
     }
 
