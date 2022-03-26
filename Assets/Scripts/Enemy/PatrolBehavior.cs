@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PatrolBehavior : MonoBehaviour
 {
-    [SerializeField]
-    bool facing;
     [SerializeField] private float moveSpeed;
     [SerializeField] private BoxCollider2D groundCheck;
     [SerializeField] private BoxCollider2D wallCheck;
@@ -21,7 +19,7 @@ public class PatrolBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (facing)
+        if (!_beginDirection)
             Flip();
         enemyBody = GetComponent<Rigidbody2D>();
         if (_beginDirection)
