@@ -1,19 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    Slider slider;
+
+  
+
     [SerializeField]
-    float health;
+    float currentHealth;
     [SerializeField]
     GameObject DeathAnimation;
- 
+    
+   
+    
+
+    GameObject healthBar;
+
+
 
     // Update is called once per frame
+    private void Start()
+    {
+        healthBar = transform.Find("EnemyHP").gameObject;
+        healthBar.GetComponent<Canvas>().worldCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        slider = healthBar.GetComponent<Slider>();
+        
+        setMaxHealth(currentHealth);
+    }
     void Update()
     {
-        if(health <= 0)
+        setHealth(currentHealth);
+        
+
+        if(currentHealth <= 0)
         {
             Instantiate(DeathAnimation, transform.position, Quaternion.identity);
             FindObjectOfType<AudioManager>().Play("Death");
@@ -23,10 +45,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void decreaseHealth(float damage) 
     {
-        health -= damage;
+        currentHealth -= damage;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         
     }
+    public void setMaxHealth(float health) { slider.maxValue = health; slider.value = health; }
+    void setHealth(float health) { slider.value = health; }
 }

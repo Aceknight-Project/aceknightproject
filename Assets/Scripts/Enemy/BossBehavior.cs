@@ -37,6 +37,7 @@ public class BossBehavior : MonoBehaviour
         healthBar.setMaxHealth(healthPoint);
         player = GameObject.Find("Aceknight");
 
+
     }
 
     // Update is called once per frame
