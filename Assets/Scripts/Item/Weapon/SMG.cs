@@ -24,7 +24,7 @@ public class SMG : BaseWeapon
         Silenced = false;
         Automatic = true;
         BulletCount = 1;
-        BulletSpread = 15f;
+        BulletSpread = 10f;
         BulletSpeed = 1700f;
     }
 }

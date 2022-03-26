@@ -24,7 +24,7 @@ public class Pistol : BaseWeapon
         Silenced = true;
         Automatic = false;
         BulletCount = 1;
-        BulletSpread = 5f;
+        BulletSpread = 3f;
         BulletSpeed = 2000f;
     }
 }

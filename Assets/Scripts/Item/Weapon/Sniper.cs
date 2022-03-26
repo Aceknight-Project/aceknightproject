@@ -18,7 +18,7 @@ public class Sniper : BaseWeapon
     public override void SetDefaults()
     {
         FireRate = 1.5f;
-        Damage = 200;
+        Damage = 100;
         Offset = 0;
         Ranged = true;
         Silenced = false;

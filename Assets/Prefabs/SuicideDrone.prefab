@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189984a9ea93c494a90384866d83221d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 50
   DeathAnimation: {fileID: 6041888606650602280, guid: 716ce556ed97a4e43a12deb17629c160, type: 3}
 --- !u!114 &7237387860193230951
 MonoBehaviour:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8d516c50dec394fb103c65c3d5585d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 500
+  moveSpeed: 600
   groundCheck: {fileID: 7237387860193230945}
   wallCheck: {fileID: 7237387860193231257}
   footCollider: {fileID: 7237387860193230945}
@@ -209,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4445381, y: -0.0051515102}
+  m_Offset: {x: 1.4445381, y: 0.000017940998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -220,7 +220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47129822, y: 2.1099763}
+  m_Size: {x: 0.47129822, y: 2.8026752}
   m_EdgeRadius: 0
 --- !u!95 &7237387860193230947
 Animator:
