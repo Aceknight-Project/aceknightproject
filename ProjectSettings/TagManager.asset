@@ -7,6 +7,7 @@ TagManager:
   - FlakCannon
   - Shield
   - Enemy
+  - FriendlyProjectile
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - EnemyProjectile
   - Item
-  - 
+  - EnemyTouch
   - 
   - 
   - 

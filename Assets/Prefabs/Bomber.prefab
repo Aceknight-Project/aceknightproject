@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 243426094583064823}
   - component: {fileID: 9168544041024536884}
   - component: {fileID: 2351732936143035674}
+  - component: {fileID: -649499865868121460}
   m_Layer: 11
   m_Name: Bomber
   m_TagString: Enemy
@@ -135,12 +136,12 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 438eebe49a97f8242871b7cc7db3a8fe, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!61 &4815864568804933846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.96844995, y: -1.9451245}
+  m_Offset: {x: 0.96844995, y: -2.614346}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -252,7 +253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7132347, y: 1.2297509}
+  m_Size: {x: 0.71323466, y: 2.5681944}
   m_EdgeRadius: 0
 --- !u!61 &2351732936143035674
 BoxCollider2D:
@@ -280,3 +281,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0512178, y: 2.1113544}
   m_EdgeRadius: 0
+--- !u!114 &-649499865868121460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815864568804933851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189984a9ea93c494a90384866d83221d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  DeathAnimation: {fileID: 6041888606650602280, guid: 716ce556ed97a4e43a12deb17629c160, type: 3}

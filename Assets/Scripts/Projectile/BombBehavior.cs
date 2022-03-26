@@ -66,7 +66,7 @@ public class BombBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || bombCollider.IsTouchingLayers(groundLayer))
+        if (collision.gameObject.tag == "Player" || bombCollider.IsTouchingLayers(groundLayer))
         {
             //animator.Play("explosion");
             explode();
@@ -92,7 +92,8 @@ public class BombBehavior : MonoBehaviour
         {
             Vector2 direction = playerRef.transform.position - transform.position;
             playerRef.GetComponent<PlayerBehavior>().TakeDamage(damage);
-            playerRef.GetComponent<Rigidbody>().AddForce(direction);
+            playerRef.GetComponent<Rigidbody2D>().AddForce(direction);
+            Destroy(gameObject);
         }
     }
 }

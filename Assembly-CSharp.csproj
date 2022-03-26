@@ -91,6 +91,9 @@
     <Compile Include="Assets\Scripts\Enemy\BomberBehavior.cs" />
     <Compile Include="Assets\Scripts\Item\Pickup\MedkitController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossHealthBar.cs" />
+    <Compile Include="Assets\Scripts\Enemy\SuicideBehavior.cs" />
+    <Compile Include="Assets\Scripts\Effect\ExplosionController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\SpawnerBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

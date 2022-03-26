@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
         if(health <= 0)
         {
             Instantiate(DeathAnimation, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Death");
             Destroy(gameObject);
         }
     }

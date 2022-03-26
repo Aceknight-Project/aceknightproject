@@ -112,6 +112,7 @@ public class PlayerBehavior : MonoBehaviour
         GameObject GameOverInstance = Instantiate(Gameover, transform.position, Quaternion.identity);
         GameObject mainCam = GameObject.Find("Main Camera");
         GameOverInstance.transform.position = mainCam.transform.position;
+        FindObjectOfType<AudioManager>().Play("Death");
         Destroy(gameObject);
     }
 }

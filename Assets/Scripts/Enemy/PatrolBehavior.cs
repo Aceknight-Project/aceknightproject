@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PatrolBehavior : MonoBehaviour
 {
+    [SerializeField]
+    bool facing;
     [SerializeField] private float moveSpeed;
     [SerializeField] private BoxCollider2D groundCheck;
     [SerializeField] private BoxCollider2D wallCheck;
     [SerializeField] private Collider2D footCollider;
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] private bool _beginDirection;
+    [SerializeField] public bool _beginDirection;
     [SerializeField] public bool mustPatrol;
     [SerializeField] VisionCone vision;
     private float _directionMulti;
@@ -19,6 +21,8 @@ public class PatrolBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (facing)
+            Flip();
         enemyBody = GetComponent<Rigidbody2D>();
         if (_beginDirection)
         {
@@ -51,14 +55,48 @@ public class PatrolBehavior : MonoBehaviour
             MoveForward();
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.tag == "FriendlyProjectile")
+        {
+            Vector3 contactPoint = collision.contacts[0].point;
+            Vector3 center = footCollider.bounds.center;
 
+            bool right = contactPoint.x > center.x;
+
+            if (right)
+            {
+                if (_directionMulti < 0) 
+                    Flip();
+            }
+            else
+            {
+                if (_directionMulti > 0)
+                {
+                    Flip();
+                }
+            }
+            Destroy(collision.collider.gameObject);
+        }
+    }
     private void Flip()
     {
         _directionMulti *= -1;
         transform.localScale = new Vector2(_directionMulti, transform.localScale.y);
-        if(vision != null)
+        if (vision != null)
         {
-            vision.rootAngle = 360 - vision.rootAngle;
+            if (_directionMulti > 0)
+            {
+                if (vision.rootAngle >= 270 && vision.rootAngle <= 90) vision.rootAngle = 360 - vision.rootAngle;
+                if (vision.rootAngle == 180) vision.rootAngle = 0;
+            }
+            else
+            {
+                if (vision.rootAngle > 90 && vision.rootAngle < 270) vision.rootAngle = 360 - vision.rootAngle;
+                if (vision.rootAngle == 0) vision.rootAngle = 180;
+            }
+
+
         }
     }
 
@@ -67,5 +105,4 @@ public class PatrolBehavior : MonoBehaviour
         enemyBody.velocity = new Vector2(moveSpeed * Time.fixedDeltaTime * _directionMulti, enemyBody.velocity.y);
     }
 
-    
 }

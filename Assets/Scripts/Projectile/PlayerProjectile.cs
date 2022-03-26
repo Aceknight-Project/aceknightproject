@@ -20,7 +20,7 @@ public class PlayerProjectile : ProjectileBehavior
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 11 || collision.gameObject.layer == 14)
         {
             EnemyHealth enemyHP = collision.gameObject.GetComponent<EnemyHealth>();
             enemyHP.decreaseHealth(Damage);
