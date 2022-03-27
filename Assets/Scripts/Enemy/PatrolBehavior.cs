@@ -59,22 +59,25 @@ public class PatrolBehavior : MonoBehaviour
         {
             Vector3 contactPoint = collision.contacts[0].point;
             Vector3 center = footCollider.bounds.center;
-
-            bool right = contactPoint.x > center.x;
-
-            if (right)
+            PlayerProjectile projectile = collision.collider.gameObject.GetComponent<PlayerProjectile>();
+            if (!projectile.Silenced)
             {
-                if (_directionMulti < 0) 
-                    Flip();
-            }
-            else
-            {
-                if (_directionMulti > 0)
+                bool right = contactPoint.x > center.x;
+
+                if (right)
                 {
-                    Flip();
+                    if (_directionMulti < 0)
+                        Flip();
                 }
+                else
+                {
+                    if (_directionMulti > 0)
+                    {
+                        Flip();
+                    }
+                }
+                Destroy(collision.collider.gameObject);
             }
-            Destroy(collision.collider.gameObject);
         }
     }
     private void Flip()

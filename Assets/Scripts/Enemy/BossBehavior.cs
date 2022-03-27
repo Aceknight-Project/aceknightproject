@@ -16,13 +16,16 @@ public class BossBehavior : MonoBehaviour
     GameObject MenuBtn;
     [SerializeField]
     GameObject specialAttackIndicator;
+    [SerializeField]
+    GameObject suicideSpawner;
     GameObject player;
     GameObject Indicator;
     float timer1 = 0f;
     float timer2 = 0f;
+    float timer3 = 0f;
     float timerIndicator = 0f;
     bool timerIndicatorStarted = false;
-    
+    int randomSpawn;
     public bool isInvulnerable = false;
     public float healthPoint;
     public float currentHealth;
@@ -61,6 +64,13 @@ public class BossBehavior : MonoBehaviour
             Indicator.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
             timer2 = 0f;
         }
+        timer3 += Time.deltaTime;
+        if (timer3 >= 20)
+        {
+            GameObject suicideSpawnerPrefab = GameObject.Instantiate(suicideSpawner, new Vector3(22, 58), Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Lightning");
+            timer3 = 0f;
+        }
         if (timerIndicatorStarted)
         {
             timerIndicator += Time.deltaTime;
@@ -95,7 +105,7 @@ public class BossBehavior : MonoBehaviour
         GameObject mainCam = GameObject.Find("Main Camera");
         winScreen.transform.position = mainCam.transform.position;
         MenuBtn.SetActive(true);
-
+        Destroy(player);
         Destroy(gameObject);
     }
     public void OnCollisionEnter2D(Collision2D collision)

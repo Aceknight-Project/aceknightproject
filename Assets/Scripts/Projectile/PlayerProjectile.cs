@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerProjectile : ProjectileBehavior
 {
     public float Damage { get; set; }
+    public bool Silenced;
     // Start is called before the first frame update
     void Start()
     {
